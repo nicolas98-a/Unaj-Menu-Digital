@@ -1,0 +1,12 @@
+#admin {
+    padding-top: 100px;
+    margin-left: 100px;
+}
+.navbar {
+    border-bottom: #c0392b 3px solid;
+    
+}
+
+#mercaderias-pedido li {
+    display: inline;
+}

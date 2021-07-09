@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tp.Restaurante.API</name>
+    </assembly>
+    <members>
+        <member name="M:Tp.Restaurante.API.Controllers.ComandaController.Post(Tp.Restaurante.Domain.DTOs.CreateComandaRequestDto)">
+            <summary>
+            Agrega una comanda
+            </summary>
+            <param name="comanda"></param>
+            <returns>Retorna el id de la comanda y la entidad a la que pertenece</returns>
+        </member>
+        <member name="M:Tp.Restaurante.API.Controllers.ComandaController.GetComandas(System.String)">
+            <summary>
+            Devuelve todas las comadas, permite filtrar por fecha
+            </summary>
+            <param name="fecha"></param>
+            <returns>Retorna la informacion de las comandas</returns>
+        </member>
+        <member name="M:Tp.Restaurante.API.Controllers.ComandaController.GetComandaById(System.String)">
+            <summary>
+            Devuelve la comada que corresponde al id ingresado
+            </summary>
+            <param name="Id"></param>
+            <returns>Retorna la informacion de la comanda</returns>
+        </member>
+        <member name="M:Tp.Restaurante.API.Controllers.MercaderiaController.Post(Tp.Restaurante.Domain.DTOs.MercaderiaDto)">
+            <summary>
+            Agrega una mercaderia
+            </summary>
+            <param name="mercaderia"></param>
+            <returns>Retorna el id de la mercaderia y la entidad a la que pertenece</returns>
+        </member>
+        <member name="M:Tp.Restaurante.API.Controllers.MercaderiaController.PutMercaderia(System.Int32,Tp.Restaurante.Domain.DTOs.MercaderiaDto)">
+            <summary>
+            Actualiza los datos de una mercaderia 
+            </summary>
+            <param name="Id"></param>
+            <param name="mercaderia"></param>
+            <returns>No retorna contenido</returns>
+        </member>
+        <member name="M:Tp.Restaurante.API.Controllers.MercaderiaController.DeleteMercaderia(System.Int32)">
+            <summary>
+            Borra una mercaderia
+            </summary>
+            <param name="Id"></param>
+            <returns>No retorna contenido</returns>
+        </member>
+        <member name="M:Tp.Restaurante.API.Controllers.MercaderiaController.GetMercaderiaById(System.String)">
+            <summary>
+            Devuelve una mercaderia segun su id
+            </summary>
+            <param name="Id"></param>
+            <returns>Retorna los datos de la mercaderia</returns>
+        </member>
+        <member name="M:Tp.Restaurante.API.Controllers.MercaderiaController.GetMercaderias(System.String)">
+            <summary>
+            Devuelve toda la mercaderia que hay, permite filtrar por tipo
+            </summary>
+            <param name="tipo"></param>
+            <returns>Retorna los datos de la mercaderia</returns>
+        </member>
+    </members>
+</doc>

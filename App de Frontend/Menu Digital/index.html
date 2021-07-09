@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">          
+  
+    <link rel="stylesheet" href="main.css">
+  
+    <title>Menu Digital</title>  
+
+</head>
+<body data-bs-spy="scroll" data-bs-target="#nav-menu">
+
+    <header id="home-section">
+        <div class="dark-overlay">
+            <div class="home-inner">
+                <div class="container>">
+                    <div class="row">
+                        <div class="col-lg-8 d-none d-sm-block">
+                            <div id="presentacion">
+                                <h1 class="display-4">Restaurante</h1>
+                                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione molestiae repellat reprehenderit accusamus earum accusantium voluptas voluptatum asperiores possimus error, ad non saepe labore consectetur. Labore, eveniet. Aperiam, consequuntur!</P>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="nav-menu">
+    <div class="container">
+      <a class="navbar-brand" href="#">Menu Digital</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#home-section">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#mercaderia-section">Mercaderias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pedidos-section">Pedido</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Administrador
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="form-mercaderia.html" target="_self">Registrar Mercaderia</a></li>
+              <li><a class="dropdown-item" href="comandas.html">Ver Pedidos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <section id="mercaderia-section">
+      <div id="mercaderia-section-header">
+        <h1 class="display-6">Todo lo que ofrecemos.....</h1>
+    </div>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <div class="card">
+              <img src="./img/entradas.jpg" class="card-img-top" alt="entradas">
+              <div class="card-body">
+                <h5 class="card-title">Entradas</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a class="btn btn-primary ver-mas" id="1">Ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="card" >
+              <img src="./img/minutas.jpg" class="card-img-top" alt="minutas">
+              <div class="card-body">
+                <h5 class="card-title">Minutas</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a class="btn btn-primary ver-mas" id="2">Ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="card" >
+              <img src="./img/pastas.png" class="card-img-top" alt="pastas">
+              <div class="card-body">
+                <h5 class="card-title">Pastas</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a class="btn btn-primary ver-mas" id="3">Ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="card" >
+              <img src="./img/parrilla.jpg" class="card-img-top" alt="parrilla">
+              <div class="card-body">
+                <h5 class="card-title">Parrilla</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a class="btn btn-primary ver-mas" id="4">Ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="card" >
+              <img src="./img/pizzas.jpg" class="card-img-top" alt="pizzas">
+              <div class="card-body">
+                <h5 class="card-title">Pizzas</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a  class="btn btn-primary ver-mas" id="5">Ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="card" >
+              <img src="./img/sandwich.jpg" class="card-img-top" alt="sandwich">
+              <div class="card-body">
+                <h5 class="card-title">Sandwiches</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a class="btn btn-primary ver-mas" id="6">Ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="card" >
+              <img src="./img/ensalada.jpg" class="card-img-top" alt="ensalada">
+              <div class="card-body">
+                <h5 class="card-title">Ensaladas</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a class="btn btn-primary ver-mas" id="7">Ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="card" >
+              <img src="./img/bebidas.jpg" class="card-img-top" alt="bebidas">
+              <div class="card-body">
+                <h5 class="card-title">Bebidas</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a class="btn btn-primary ver-mas" id="8">Ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="card" >
+              <img src="./img/cerveza artesanal.jpg" class="card-img-top" alt="cerveza">
+              <div class="card-body">
+                <h5 class="card-title">Cervezas Artesanales</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a class="btn btn-primary ver-mas" id="9">Ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="card" >
+              <img src="./img/postres.jpg" class="card-img-top" alt="postres">
+              <div class="card-body">
+                <h5 class="card-title">Postres</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a class="btn btn-primary ver-mas" id="10">Ver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <div class="row" id="cards-detalle"></div>
+
+      <template id="template-detalle">
+          <div class="card" style="width: 18rem;">
+              <img src="" class="card-img-top-detalle">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+              </div>
+              <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item">Precio: $ <span id="precio">1</span></li>
+                <li class="list-group-item">Tipo:  <span id="tipo">c</span></li>
+                <li class="list-group-item">Ingredientes: <span id="ingredientes">v</span> </li>
+                <li class="list-group-item">Preparacion: <span id="preparacion">bgfh</span> </li>
+              </ul>
+            </div>
+      </template>
+
+    </section>
+
+    <section id="pedidos-section">
+      <div class="contenedor">
+        <h2 class="py-5">Haga su Pedido</h2>     
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-11">
+              <div class="row" id="cards"></div>
+            </div>
+            <div class="col-1 ms-auto">
+              <a class="sticky-top" id="img-simbolo" data-bs-toggle="modal" href="#staticBackdrop" aria-controls="staticBackdrop">
+                <img src="/img/order-list-2-615397.png" alt="simbolo-pedido">
+              </a> 
+            </div>
+          </div>
+        </div>       
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="background-color: darkslategrey;">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Pedido</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <table class="table" >
+                  <thead>
+                    <tr>
+                      <th scope="col">Item</th>
+                      <th scope="col">Cantidad</th>
+                      <th scope="col">Acción</th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody id="items"></tbody>
+                  <tfoot>
+                    <tr id="footer">
+                      <th scope="row" colspan="5">Pedido vacío - comience a ordenar!</th>
+                    </tr>
+                    <tr id="seleccione-entrega"></tr>
+                  </tfoot>
+                </table>
+                <div class="container mb-5" id="respuesta"></div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <template id="template-card">
+      <div class="carta">
+        <div class="imgBx">
+            <img src="" class="img-fluid">
+        </div>
+        <div class="contenido">
+            <h2>Pizza</h2>
+            <h4>$<span>Precio</span></h4>
+            <h5>Tipo</h5>
+            <button class="btn btn-primary" id="btn-agregar">Agregar</button>
+        </div>
+      </div>
+    </template>
+
+    <template id="template-footer">
+      <th scope="row" colspan="1">Total seleccionados</th>
+      <td>10</td>
+      <td>
+          <button class="btn btn-danger btn-sm" id="vaciar-pedido">
+              vaciar todo
+          </button>
+      </td>
+      <td class="font-weight-bold">$ <span>5000</span></td>  
+  </template>
+  <template id="template-pedido">
+    <tr>
+      <td>Café</td>
+      <td>1</td>
+      <td>
+          <button class="btn btn-info btn-sm">
+              +
+          </button>
+          <button class="btn btn-danger btn-sm">
+              -
+          </button>
+      </td>
+      <td>$ <span id="precioTotal">500</span></td>
+    </tr>
+  </template>
+    
+    <footer id="contacto">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-12 p-5">
+                <p class="text-center">&copy; Copyright 2021 - Buenos Aires Argentina.  All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+    </footer>
+
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+</html>

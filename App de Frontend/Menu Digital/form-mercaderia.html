@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">          
+    <link rel="stylesheet" href="form.css">
+    <title>Registrar Mercaderia</title>
+</head>
+<body>
+    <header id="admin">
+        <div class="dark-overlay">
+            <div class="home-inner">
+                <div class="container>">
+                    <div class="row">
+                        <div class="col-lg-8 d-none d-sm-block">
+                            <div id="presentacion">
+                                <h1 class="display-4">Administrador</h1>
+                                <p class="display-8">Complete el siguiente formulario para registrar una Mercaderia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Menu Digital</a>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="comandas.html">Ver Pedidos</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+<section id="form-mercaderia">
+  <div class="container">
+    <form id="formulario-mercaderia">
+      <div class="form-floating">
+        
+        <input type="text" class="form-control" id="nom" name="nombre" placeholder="Nombre">
+        <label for="nom">Nombre</label>
+
+      </div>
+      <div class="form-floating">
+        <select class="form-select" id="tipo" name="tipoMercaderiaId" aria-label="Floating label select example">
+          <option value="" disabled selected>Elija una opcion</option>
+          <option value="1">Entrada</option>
+          <option value="2">Minutas</option>
+          <option value="3">Pastas</option>
+          <option value="4">Parrilla</option>
+          <option value="5">Pizzas</option>
+          <option value="6">Sandwich</option>
+          <option value="7">Ensaladas</option>
+          <option value="8">Bebidas</option>
+          <option value="9">Cerveza Artesanal</option>
+          <option value="10">Postres</option>
+        </select>
+        <label for="tipo">Tipo de Mercaderia</label>
+      </div>
+      <div class="form-floating">
+        <input type="number" class="form-control" id="precio" name="precio" placeholder="Precio">
+        <label for="precio">Precio</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="ingredientes" name="ingredientes" placeholder="Ingredientes">
+        <label for="ingredientes">Ingredientes</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="preparacion" name="preparacion" placeholder="Preparacion">
+        <label for="preparacion">Preparacion</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="imagen" name="imagen" placeholder="imagen">
+        <label for="imagen">Imagen</label>
+      </div>
+      <div class="form-floating">
+        <button type="submit" class="btn btn-primary mb-3" id="btn-submit">Registrar</button>
+      </div>
+    </form>
+  </div>    
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="form-mercaderia.js"></script>
+</body>
+</html>

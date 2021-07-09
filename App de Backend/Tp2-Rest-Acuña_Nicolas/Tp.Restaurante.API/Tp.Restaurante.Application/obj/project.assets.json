@@ -1,0 +1,207 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "FluentValidation/10.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/FluentValidation.dll": {}
+        }
+      },
+      "FluentValidation.AspNetCore/10.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "10.2.1",
+          "FluentValidation.DependencyInjectionExtensions": "10.2.1"
+        },
+        "compile": {
+          "lib/net5.0/FluentValidation.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/FluentValidation.AspNetCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "FluentValidation.DependencyInjectionExtensions/10.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "10.2.1",
+          "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Tp.Restaurante.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Tp.Restaurante.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tp.Restaurante.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FluentValidation/10.2.1": {
+      "sha512": "ZFyVk+AXiWjML6M201GUbkhrmrUfd1U55LmOPOEHpw2bQ+STi0TIilXX3KlWvqt5AX5qSu+B1d/s/Ik5p6Tu3Q==",
+      "type": "package",
+      "path": "fluentvalidation/10.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.10.2.1.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
+    "FluentValidation.AspNetCore/10.2.1": {
+      "sha512": "YFUYLbPdgR2cdGXdwxGzqFH/aIDq31X+SdSowA7dlbkcGEosP9xUzGB271vCRXZ+KGW31ICEIXl5zEnT3A8FGQ==",
+      "type": "package",
+      "path": "fluentvalidation.aspnetcore/10.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.aspnetcore.10.2.1.nupkg.sha512",
+        "fluentvalidation.aspnetcore.nuspec",
+        "lib/net5.0/FluentValidation.AspNetCore.dll",
+        "lib/net5.0/FluentValidation.AspNetCore.xml",
+        "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll",
+        "lib/netcoreapp3.1/FluentValidation.AspNetCore.xml"
+      ]
+    },
+    "FluentValidation.DependencyInjectionExtensions/10.2.1": {
+      "sha512": "iLzhlZACcu/DZ0OSoA6M/lHuGak3Bl9koFKC58ntNUDEa6BwhCS3JMKGQfJfWAU30D7DlBeKuZOySEK+93TSPA==",
+      "type": "package",
+      "path": "fluentvalidation.dependencyinjectionextensions/10.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.dependencyinjectionextensions.10.2.1.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.nuspec",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
+        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.0": {
+      "sha512": "8/CtASu80UIoyG+r8FstrmZW5GLtXxzoYpjj3jV0FKZCL5CiFgSH3pAmqut/dC68mu7N1bU6v0UtKKL3gCUQGQ==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+      ]
+    },
+    "Tp.Restaurante.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Tp.Restaurante.Domain/Tp.Restaurante.Domain.csproj",
+      "msbuildProject": "../Tp.Restaurante.Domain/Tp.Restaurante.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "FluentValidation.AspNetCore >= 10.2.1",
+      "Tp.Restaurante.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Nico\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Application\\Tp.Restaurante.Application.csproj",
+      "projectName": "Tp.Restaurante.Application",
+      "projectPath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Application\\Tp.Restaurante.Application.csproj",
+      "packagesPath": "C:\\Users\\Nico\\.nuget\\packages\\",
+      "outputPath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Application\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Nico\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Domain\\Tp.Restaurante.Domain.csproj": {
+              "projectPath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Domain\\Tp.Restaurante.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "dependencies": {
+          "FluentValidation.AspNetCore": {
+            "target": "Package",
+            "version": "[10.2.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
