@@ -1,9 +1,10 @@
-    
+import { fetchMercaderia, getMercaderiaByTipo, postPedido } from './config.js';
+
 const cards = document.getElementById('cards');
 const items = document.getElementById('items');
 const footer = document.getElementById('footer');
 const respuesta = document.getElementById('respuesta');
-const detalle = document.getElementById('cards-detalle');
+//const detalle = document.getElementById('cards-detalle');
 const btnVerMas = document.querySelectorAll('.ver-mas');
 const templateCard = document.getElementById('template-card').content ;
 const templateFooter = document.getElementById('template-footer').content;
@@ -16,7 +17,7 @@ let pedido = {}
 let mercaderias = []
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetchMercaderia();
+    renderMercaderia();
 });
 
 cards.addEventListener('click', e => {
@@ -26,7 +27,7 @@ cards.addEventListener('click', e => {
 items.addEventListener('click', e => {
     btnAccion(e);
 });
-
+/*
 const fetchMercaderia = async () => {
     try {
         const res = await fetch('https://localhost:44368/api/Mercaderia')
@@ -36,7 +37,79 @@ const fetchMercaderia = async () => {
         console.log(error)
     }
 }
+*/
+const resetRespuesta = () => {
+    respuesta.innerHTML = " ";
+}
 
+const renderMercaderia = async () => {
+    var mercaderiaFetch = await fetchMercaderia();
+    pintarcards(mercaderiaFetch);
+}
+
+const enviarPedido = async () => {
+    var formaEntrega = document.getElementById('entrega').value;
+    console.log(formaEntrega)
+    var datos = {"mercaderias": mercaderias,
+                "formaEntrega":  formaEntrega };
+    console.log(datos);
+
+    let res = await postPedido(datos);
+
+    if (res.status === 201) {
+        const data = await res.json()
+        console.log(data);
+        respuesta.innerHTML = `   
+        <div class="card text-center p-0 my-2 ">
+            <div class="card-header bg-transparent text-success border-0">
+                <i class="far fa-check-circle display-4 d-block"></i>
+                <h5 class="card-title text-success display-4 d-block">Registro exitoso</h5>
+            </div>
+            <div class="card-body">
+                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                    <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                    </symbol>  
+                </svg>
+                <div class="alert alert-success d-flex align-items-center" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                    <div>
+                        El Pedido se ha registrado con éxito.
+                    </div>
+                </div>
+                <a href="index.html" class="btn btn-primary">Ir al menu </a>
+                <a onclick="resetRespuesta()" class="btn btn-primary">Seguir ordenando </a>
+            </div>
+        </div> `;
+    }
+    if (res.status === 400) {
+        const data = await res.json()
+        console.log(data);
+        respuesta.innerHTML = ` 
+        <div class="card text-center p-0 my-2 ">
+            <div class="card-header bg-transparent text-danger border-0">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h5 class="card-title text-danger display-4 d-block">Registro Fallido</h5>
+            </div>
+            <div class="card-body">               
+                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> 
+                    <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </symbol>
+                </svg>          
+                <div class="alert alert-danger d-flex align-items-center" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        El Pedido no se ha registrado.
+                    </div>
+                </div>
+                <a href="index.html" class="btn btn-danger">Ir al menu </a>
+                <a onclick="resetRespuesta()" class="btn btn-danger">Hacer otro Pedido </a>
+            </div>
+        </div>  `;
+    }
+}
+/*
 const postPedido = async () => {
     try {
         var formaEntrega = document.getElementById('entrega').value;
@@ -107,9 +180,8 @@ const postPedido = async () => {
         console.log(error)
     }
 }
-const resetRespuesta = () => {
-    respuesta.innerHTML = " ";
-}
+*/
+
 // Pintar mercaderia
 const pintarcards = data => {
     cards.innerHTML = '';
@@ -221,7 +293,7 @@ const pintarFooter = () => {
 
     const btnPedido = document.getElementById('enviar-pedido');
     btnPedido.addEventListener('click', () => {
-        postPedido();
+        enviarPedido();
     });
 }
 
@@ -256,13 +328,14 @@ const btnAccion = e => {
 }
 
 btnVerMas.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', async () => {
         let id = btn.id;
-        getMercaderiaByTipo(id);
-
+        let mercaderiasByTipo = await getMercaderiaByTipo(id);
+        pintarcards (mercaderiasByTipo); 
     });
 });
 
+/*
 const getMercaderiaByTipo = async (id) => {
     try {
         const response = await fetch('https://localhost:44368/api/Mercaderia'+'?tipo='+id)
@@ -273,7 +346,7 @@ const getMercaderiaByTipo = async (id) => {
     }
 
 }
-
+*/
 // Pintar mercaderia al detalle
 /*
 const pintarCardsDetalle = data => {

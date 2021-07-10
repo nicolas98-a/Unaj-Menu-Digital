@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">          
   
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/styles/main.css">
   
     <title>Menu Digital</title>  
 
@@ -69,7 +69,7 @@
           <div class="col-2">
             <div class="sticky-top">
               <div class="btn-group-vertical">
-                <button class="btn btn-primary ver-mas" onclick="fetchMercaderia()">Ver todo</button>
+                <button class="btn btn-primary ver-mas" onclick="renderMercaderia()">Ver todo</button>
                 <button class="btn btn-primary ver-mas" id="1">Entrada</button>
                 <button class="btn btn-primary ver-mas" id="2">Minuta</button>
                 <button class="btn btn-primary ver-mas" id="3">Pasta</button>
@@ -136,7 +136,7 @@
                   <tr id="seleccione-entrega"></tr>
                 </tfoot>
               </table>
-              <div class="container mb-5" id="respuesta"></div>
+              <div class="container" id="respuesta"></div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -217,7 +217,7 @@
           </div>
     </footer>
 
-  <script src="index.js"></script>
+  <script type="module" src="/js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
 </body>
