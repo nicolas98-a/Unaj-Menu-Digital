@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xqvhK81OWqlOCDj0wQx6poxtRgbHpfzEpjX8ybaFBUrh+5Kwncj5wjhWMAQUFwwMWAPNZ763c5OMDBp6F0LehQ==",
+  "dgSpecHash": "g+/aodL1p6Ff+2QNOu5sxdjGZvVP0s96EkdarI4n4hvQ0ga8Wa6upgRfPm2WLgXWMdZvK0phnRcRuYuF5tAi8g==",
   "success": true,
-  "projectFilePath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Domain\\Tp.Restaurante.Domain.csproj",
+  "projectFilePath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas - correccion\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Domain\\Tp.Restaurante.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W2vO8Tqooxr7P0BEMMe1FIafmbf1OMmmNhLmw81tm9ijhwugmO6FewxAL/8ETSO8cHgO0Cbd+OmYEe5ynsHlRQ==",
+  "dgSpecHash": "6woO4NIZz4HPrvJixu5fRhDAMrBg6+UsCNQE+/wDUEOUFBBdBV9vUq6H4SHLBUeYrMbCNuLZGTOLly0NitVU6Q==",
   "success": true,
-  "projectFilePath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.AccessData\\Tp.Restaurante.AccessData.csproj",
+  "projectFilePath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas - correccion\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.AccessData\\Tp.Restaurante.AccessData.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nico\\.nuget\\packages\\dapper\\1.50.5\\dapper.1.50.5.nupkg.sha512",
     "C:\\Users\\Nico\\.nuget\\packages\\fluentvalidation\\10.2.1\\fluentvalidation.10.2.1.nupkg.sha512",

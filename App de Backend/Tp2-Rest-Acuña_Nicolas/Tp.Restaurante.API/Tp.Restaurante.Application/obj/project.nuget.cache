@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YGDmnCLwfeh4kWDG/Bz7ldlwggcLRJYDTUc2qquyjMfQwdZImKsBdOLsPOBJPXXdNNTtRX5CibtXxR92s4NUGg==",
+  "dgSpecHash": "zyBEQDYnrsrKj74YDpi2/J1SENsUEbOGqsSUMFfryIV0hpjqt0WK8Hbx7BigDX+nKLxgrBzZTZw1xEHalmeQlA==",
   "success": true,
-  "projectFilePath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Application\\Tp.Restaurante.Application.csproj",
+  "projectFilePath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas - correccion\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Application\\Tp.Restaurante.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nico\\.nuget\\packages\\fluentvalidation\\10.2.1\\fluentvalidation.10.2.1.nupkg.sha512",
     "C:\\Users\\Nico\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.2.1\\fluentvalidation.aspnetcore.10.2.1.nupkg.sha512",

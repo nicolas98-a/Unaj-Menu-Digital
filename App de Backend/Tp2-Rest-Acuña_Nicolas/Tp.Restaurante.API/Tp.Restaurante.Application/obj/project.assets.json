@@ -143,11 +143,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Application\\Tp.Restaurante.Application.csproj",
+      "projectUniqueName": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas - correccion\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Application\\Tp.Restaurante.Application.csproj",
       "projectName": "Tp.Restaurante.Application",
-      "projectPath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Application\\Tp.Restaurante.Application.csproj",
+      "projectPath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas - correccion\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Application\\Tp.Restaurante.Application.csproj",
       "packagesPath": "C:\\Users\\Nico\\.nuget\\packages\\",
-      "outputPath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Application\\obj\\",
+      "outputPath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas - correccion\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nico\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -164,8 +164,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Domain\\Tp.Restaurante.Domain.csproj": {
-              "projectPath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Domain\\Tp.Restaurante.Domain.csproj"
+            "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas - correccion\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Domain\\Tp.Restaurante.Domain.csproj": {
+              "projectPath": "G:\\Visual Studio\\TP3-UI-Acuña_Nicolas - correccion\\App de Backend\\Tp2-Rest-Acuña_Nicolas\\Tp.Restaurante.API\\Tp.Restaurante.Domain\\Tp.Restaurante.Domain.csproj"
             }
           }
         }

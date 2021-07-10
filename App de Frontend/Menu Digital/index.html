@@ -41,10 +41,7 @@
             <a class="nav-link" aria-current="page" href="#home-section">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#mercaderia-section">Mercaderias</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#pedidos-section">Pedido</a>
+            <a class="nav-link" href="#mercaderia-section">Pedido</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contacto">Contacto</a>
@@ -63,150 +60,100 @@
     </div>
   </nav>
 
-    <section id="mercaderia-section">
+    <section id="mercaderia-section" >
       <div id="mercaderia-section-header">
         <h1 class="display-6">Todo lo que ofrecemos.....</h1>
-    </div>
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="5000">
-            <div class="card">
-              <img src="./img/entradas.jpg" class="card-img-top" alt="entradas">
-              <div class="card-body">
-                <h5 class="card-title">Entradas</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a class="btn btn-primary ver-mas" id="1">Ver</a>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <div class="sticky-top">
+              <div class="btn-group-vertical">
+                <button class="btn btn-primary ver-mas" onclick="fetchMercaderia()">Ver todo</button>
+                <button class="btn btn-primary ver-mas" id="1">Entrada</button>
+                <button class="btn btn-primary ver-mas" id="2">Minuta</button>
+                <button class="btn btn-primary ver-mas" id="3">Pasta</button>
+                <button class="btn btn-primary ver-mas" id="4">Parrilla</button>
+                <button class="btn btn-primary ver-mas" id="5">Pizza</button>
+                <button class="btn btn-primary ver-mas" id="6">Sandwich</button>
+                <button class="btn btn-primary ver-mas" id="7">Ensalada</button>
+                <button class="btn btn-primary ver-mas" id="8">Bebida</button>
+                <button class="btn btn-primary ver-mas" id="9">Cerveza Artesanal</button>
+                <button class="btn btn-primary ver-mas" id="10">Postre</button>
               </div>
             </div>
           </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <div class="card" >
-              <img src="./img/minutas.jpg" class="card-img-top" alt="minutas">
-              <div class="card-body">
-                <h5 class="card-title">Minutas</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a class="btn btn-primary ver-mas" id="2">Ver</a>
-              </div>
-            </div>
+          <div class="col-9">
+            <div class="row" id="cards"></div>
           </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <div class="card" >
-              <img src="./img/pastas.png" class="card-img-top" alt="pastas">
-              <div class="card-body">
-                <h5 class="card-title">Pastas</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a class="btn btn-primary ver-mas" id="3">Ver</a>
-              </div>
-            </div>
+          <div class="col-1">
+            <a class="sticky-top" id="img-simbolo" data-bs-toggle="modal" href="#staticBackdrop" aria-controls="staticBackdrop">
+              <img src="/img/order-list-2-615397.png" alt="simbolo-pedido">
+            </a> 
           </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <div class="card" >
-              <img src="./img/parrilla.jpg" class="card-img-top" alt="parrilla">
-              <div class="card-body">
-                <h5 class="card-title">Parrilla</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a class="btn btn-primary ver-mas" id="4">Ver</a>
-              </div>
+        </div>
+      </div>
+
+      <template id="template-card">
+        <div class="card">
+          <img src="" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title" id="nombre"></h5>
+            <p class="card-text">$ <span>500</span></p>
+            <div class="collapse">
+              <p class="card-text">Tipo: <span id="tipo"></span></p>
+              <p class="card-text">Ingredientes: <span id="ingredientes"></span></p>
+              <p class="card-text">Preparacion:  <span id="preparacion"></span></p>
             </div>
+            <a class="btn btn-primary" id="btn-agregar">Agregar</a>
+            <a class="btn btn-secondary" id="btn-detalles">Ver Detalles</a>
           </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <div class="card" >
-              <img src="./img/pizzas.jpg" class="card-img-top" alt="pizzas">
-              <div class="card-body">
-                <h5 class="card-title">Pizzas</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a  class="btn btn-primary ver-mas" id="5">Ver</a>
-              </div>
+        </div>
+      </template>
+
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" style="background-color: darkslategrey;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Pedido</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <div class="card" >
-              <img src="./img/sandwich.jpg" class="card-img-top" alt="sandwich">
-              <div class="card-body">
-                <h5 class="card-title">Sandwiches</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a class="btn btn-primary ver-mas" id="6">Ver</a>
-              </div>
+            <div class="modal-body">
+              <table class="table" >
+                <thead>
+                  <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Acción</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody id="items"></tbody>
+                <tfoot>
+                  <tr id="footer">
+                    <th scope="row" colspan="5">Pedido vacío - comience a ordenar!</th>
+                  </tr>
+                  <tr id="seleccione-entrega"></tr>
+                </tfoot>
+              </table>
+              <div class="container mb-5" id="respuesta"></div>
             </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <div class="card" >
-              <img src="./img/ensalada.jpg" class="card-img-top" alt="ensalada">
-              <div class="card-body">
-                <h5 class="card-title">Ensaladas</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a class="btn btn-primary ver-mas" id="7">Ver</a>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <div class="card" >
-              <img src="./img/bebidas.jpg" class="card-img-top" alt="bebidas">
-              <div class="card-body">
-                <h5 class="card-title">Bebidas</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a class="btn btn-primary ver-mas" id="8">Ver</a>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <div class="card" >
-              <img src="./img/cerveza artesanal.jpg" class="card-img-top" alt="cerveza">
-              <div class="card-body">
-                <h5 class="card-title">Cervezas Artesanales</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a class="btn btn-primary ver-mas" id="9">Ver</a>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <div class="card" >
-              <img src="./img/postres.jpg" class="card-img-top" alt="postres">
-              <div class="card-body">
-                <h5 class="card-title">Postres</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a class="btn btn-primary ver-mas" id="10">Ver</a>
-              </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-      
-      <div class="row" id="cards-detalle"></div>
-
-      <template id="template-detalle">
-          <div class="card" style="width: 18rem;">
-              <img src="" class="card-img-top-detalle">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-              </div>
-              <ul class="list-group list-group-flush mb-3">
-                <li class="list-group-item">Precio: $ <span id="precio">1</span></li>
-                <li class="list-group-item">Tipo:  <span id="tipo">c</span></li>
-                <li class="list-group-item">Ingredientes: <span id="ingredientes">v</span> </li>
-                <li class="list-group-item">Preparacion: <span id="preparacion">bgfh</span> </li>
-              </ul>
-            </div>
-      </template>
 
     </section>
 
-    <section id="pedidos-section">
+    <!--
+         <section id="pedidos-section">
       <div class="contenedor">
         <h2 class="py-5">Haga su Pedido</h2>     
         <div class="container-fluid">
           <div class="row">
-            <div class="col-11">
-              <div class="row" id="cards"></div>
-            </div>
+            <div class="col-11"></div>
             <div class="col-1 ms-auto">
               <a class="sticky-top" id="img-simbolo" data-bs-toggle="modal" href="#staticBackdrop" aria-controls="staticBackdrop">
                 <img src="/img/order-list-2-615397.png" alt="simbolo-pedido">
@@ -214,43 +161,12 @@
             </div>
           </div>
         </div>       
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content" style="background-color: darkslategrey;">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel">Pedido</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <table class="table" >
-                  <thead>
-                    <tr>
-                      <th scope="col">Item</th>
-                      <th scope="col">Cantidad</th>
-                      <th scope="col">Acción</th>
-                      <th scope="col">Total</th>
-                    </tr>
-                  </thead>
-                  <tbody id="items"></tbody>
-                  <tfoot>
-                    <tr id="footer">
-                      <th scope="row" colspan="5">Pedido vacío - comience a ordenar!</th>
-                    </tr>
-                    <tr id="seleccione-entrega"></tr>
-                  </tfoot>
-                </table>
-                <div class="container mb-5" id="respuesta"></div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
+    -->
+ 
 
-    <template id="template-card">
+    <!--<template id="template-card">
       <div class="carta">
         <div class="imgBx">
             <img src="" class="img-fluid">
@@ -262,7 +178,7 @@
             <button class="btn btn-primary" id="btn-agregar">Agregar</button>
         </div>
       </div>
-    </template>
+    </template>-->
 
     <template id="template-footer">
       <th scope="row" colspan="1">Total seleccionados</th>
@@ -289,6 +205,7 @@
       <td>$ <span id="precioTotal">500</span></td>
     </tr>
   </template>
+
     
     <footer id="contacto">
         <div class="container">

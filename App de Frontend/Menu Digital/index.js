@@ -8,7 +8,7 @@ const btnVerMas = document.querySelectorAll('.ver-mas');
 const templateCard = document.getElementById('template-card').content ;
 const templateFooter = document.getElementById('template-footer').content;
 const templatePedido = document.getElementById('template-pedido').content;
-const templateMercaderiaDetalle = document.getElementById('template-detalle').content;
+//const templateMercaderiaDetalle = document.getElementById('template-detalle').content;
 const selectEntrega = document.getElementById('seleccione-entrega');
 const fragment = document.createDocumentFragment();
 
@@ -112,16 +112,25 @@ const resetRespuesta = () => {
 }
 // Pintar mercaderia
 const pintarcards = data => {
+    cards.innerHTML = '';
     data.forEach(mercaderia => {
-        templateCard.querySelector('h2').textContent = mercaderia.nombre;
+        templateCard.querySelector('#nombre').textContent = mercaderia.nombre;
         templateCard.querySelector('span').textContent = mercaderia.precio;
-        templateCard.querySelector('h5').textContent = mercaderia.tipo;
         templateCard.querySelector('img').setAttribute("src", mercaderia.imagen);
+        templateCard.querySelector('img').setAttribute("alt", mercaderia.nombre);
         templateCard.querySelector('#btn-agregar').dataset.id = mercaderia.mercaderiaId;
+        
+        templateCard.querySelector('.collapse').setAttribute('id', 'collapse-'+mercaderia.mercaderiaId);
+        templateCard.querySelector('#tipo').textContent = mercaderia.tipo;
+        templateCard.querySelector('#ingredientes').textContent = mercaderia.ingredientes;
+        templateCard.querySelector('#preparacion').textContent = mercaderia.preparacion;
+
         //Agrego los atributos para manejar el modal de bootstrap
         templateCard.querySelector('#btn-agregar').setAttribute('data-bs-toggle', 'modal');
         templateCard.querySelector('#btn-agregar').setAttribute('data-bs-target', '#staticBackdrop')
-        
+        //Agrego los atributos de bootstrap para el collapse
+        templateCard.querySelector('#btn-detalles').setAttribute('data-bs-toggle', 'collapse');
+        templateCard.querySelector('#btn-detalles').setAttribute('data-bs-target', '#collapse-'+mercaderia.mercaderiaId);
         const clone = templateCard.cloneNode(true)
         fragment.appendChild(clone)
     });
@@ -138,9 +147,9 @@ const addPedido = e => {
 const setPedido = objeto => {
     const mercaderia = {
         id: objeto.querySelector('#btn-agregar').dataset.id,
-        nombre: objeto.querySelector('h2').textContent,
+        nombre: objeto.querySelector('#nombre').textContent,
         precio: objeto.querySelector('span').textContent,
-        tipo: objeto.querySelector('h5').textContent,
+        //tipo: objeto.querySelector('#tipo').textContent,
         cantidad: 1
     }
     // Accedo al elemento que se esta repitiendo
@@ -249,16 +258,16 @@ const btnAccion = e => {
 btnVerMas.forEach(btn => {
     btn.addEventListener('click', () => {
         let id = btn.id;
-        getMercaderiaById(id);
+        getMercaderiaByTipo(id);
 
     });
 });
 
-const getMercaderiaById = async (id) => {
+const getMercaderiaByTipo = async (id) => {
     try {
         const response = await fetch('https://localhost:44368/api/Mercaderia'+'?tipo='+id)
         const data = await response.json()
-        pintarCardsDetalle(data);
+        pintarcards(data);
     } catch (error) {
         console.log(error)
     }
@@ -266,6 +275,7 @@ const getMercaderiaById = async (id) => {
 }
 
 // Pintar mercaderia al detalle
+/*
 const pintarCardsDetalle = data => {
     detalle.innerHTML = '';
     data.forEach(mercaderia => {
@@ -280,4 +290,4 @@ const pintarCardsDetalle = data => {
         fragment.appendChild(clone)
     });
     detalle.appendChild(fragment) ;
-}
+}*/

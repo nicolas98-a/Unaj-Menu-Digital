@@ -10,8 +10,11 @@ if (mes < 10) {
     mes = "0" + mes; 
 }
 console.log(mes)
-var dia = fecha.getDate()
-console.log(dia)
+var dia = fecha.getDate();
+console.log(dia);
+if (dia < 10) {
+    dia = "0" + dia;
+}
 
 var f = año.toString() + '-' + mes.toString() + "-" + dia.toString();
 console.log(f)
