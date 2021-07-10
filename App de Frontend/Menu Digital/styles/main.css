@@ -68,10 +68,20 @@ body {
 .card-title , .card-text , .btn {
   text-align: center;
 }
-.carousel {
+
+.card-body {
+  width: max-content;
+  align-items: center;
+}
+
+#rta {
+  width: fit-content;
+}
+/*.carousel {
   margin: auto;
   width: 50%;
-}
+}*/
+
 #mercaderia-section-header {
   margin: 25px 50px 30px 50px;
   text-align: center;
