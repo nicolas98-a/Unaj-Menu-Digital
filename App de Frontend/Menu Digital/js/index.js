@@ -3,7 +3,7 @@ import { fetchMercaderia, getMercaderiaByTipo, postPedido } from './config.js';
 const cards = document.getElementById('cards');
 const items = document.getElementById('items');
 const footer = document.getElementById('footer');
-const respuesta = document.getElementById('respuesta');
+//const respuesta = document.getElementById('respuesta');
 //const detalle = document.getElementById('cards-detalle');
 const btnVerMas = document.querySelectorAll('.ver-mas');
 const templateCard = document.getElementById('template-card').content ;
@@ -38,9 +38,6 @@ const fetchMercaderia = async () => {
     }
 }
 */
-const resetRespuesta = () => {
-    respuesta.innerHTML = " ";
-}
 
 const renderMercaderia = async () => {
     var mercaderiaFetch = await fetchMercaderia();
@@ -78,7 +75,7 @@ const enviarPedido = async () => {
                     </div>
                 </div>
                 <a href="index.html" class="btn btn-primary">Ir al menu </a>
-                <a onclick="resetRespuesta()" class="btn btn-primary">Seguir ordenando </a>
+                <button onclick="resetRespuesta()" class="btn btn-primary">Seguir ordenando </button>
             </div>
         </div> `;
     }
@@ -109,6 +106,12 @@ const enviarPedido = async () => {
         </div>  `;
     }
 }
+
+/*
+const resetRespuesta = () => {
+    respuesta.innerHTML = " ";
+}
+*/
 /*
 const postPedido = async () => {
     try {
@@ -192,7 +195,7 @@ const pintarcards = data => {
         templateCard.querySelector('img').setAttribute("alt", mercaderia.nombre);
         templateCard.querySelector('#btn-agregar').dataset.id = mercaderia.mercaderiaId;
         
-        templateCard.querySelector('.collapse').setAttribute('id', 'collapse-'+mercaderia.mercaderiaId);
+        templateCard.querySelector('.modal').setAttribute('id', 'modal-'+mercaderia.mercaderiaId);
         templateCard.querySelector('#tipo').textContent = mercaderia.tipo;
         templateCard.querySelector('#ingredientes').textContent = mercaderia.ingredientes;
         templateCard.querySelector('#preparacion').textContent = mercaderia.preparacion;
@@ -200,9 +203,9 @@ const pintarcards = data => {
         //Agrego los atributos para manejar el modal de bootstrap
         templateCard.querySelector('#btn-agregar').setAttribute('data-bs-toggle', 'modal');
         templateCard.querySelector('#btn-agregar').setAttribute('data-bs-target', '#staticBackdrop')
-        //Agrego los atributos de bootstrap para el collapse
-        templateCard.querySelector('#btn-detalles').setAttribute('data-bs-toggle', 'collapse');
-        templateCard.querySelector('#btn-detalles').setAttribute('data-bs-target', '#collapse-'+mercaderia.mercaderiaId);
+        //Agrego los atributos de bootstrap para el modal de detalle de mercaderia
+        templateCard.querySelector('#btn-detalles').setAttribute('data-bs-toggle', 'modal');
+        templateCard.querySelector('#btn-detalles').setAttribute('data-bs-target', '#modal-'+mercaderia.mercaderiaId);
         const clone = templateCard.cloneNode(true)
         fragment.appendChild(clone)
     });
