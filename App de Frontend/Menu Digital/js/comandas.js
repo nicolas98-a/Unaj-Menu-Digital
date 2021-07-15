@@ -1,6 +1,7 @@
 import { fetchPedidos} from './config.js';
 
 const comandas = document.getElementById('comandas');
+const pedidoTableBody = document.getElementById('pedidoTableBody');
 //const fragment = document.createDocumentFragment();
 
 const fecha = new Date();
@@ -42,6 +43,58 @@ const renderPedidos = async () => {
 
     pintarComandas(pedidosJson);
 }
+
+const pintarComandas = data => {
+    data.forEach(pedido => {
+        pedidoTableBody.insertAdjacentHTML('beforeend', getPedidoTable(pedido));
+        mercaderiaDelPedido(pedido);
+    });
+}
+
+const getPedidoTable = (pedidoJson) => {
+    return (
+        `
+        <tr>
+            <th scope="row">${pedidoJson.comandaId}</th>
+            <td style="margin:10%">${pedidoJson.formaEntrega}</td>
+            <td>${pedidoJson.precioTotal}</td>
+            <td>
+                <div class="accordion" id="accordion-${pedidoJson.comandaId}"></div>
+            </td>
+        </tr>
+
+        `
+    );
+    
+}
+
+const mercaderiaDelPedido = (pedidoJson) => {
+    let acordion = document.getElementById(`accordion-${pedidoJson.comandaId}`);
+    pedidoJson.mercaderia.forEach(plato => {
+        let elemento = document.createElement('div');
+        elemento.innerHTML = 
+        `
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="heading-${plato.mercaderiaId}">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${pedidoJson.comandaId}-${plato.mercaderiaId}" aria-expanded="true" aria-controls="collapse-${pedidoJson.comandaId}-${plato.mercaderiaId}">
+            ${plato.nombre}
+          </button>
+        </h2>
+        <div id="collapse-${pedidoJson.comandaId}-${plato.mercaderiaId}" class="accordion-collapse collapse show" aria-labelledby="heading-${plato.mercaderiaId}" data-bs-parent="#accordion-${pedidoJson.comandaId}">
+          <div class="accordion-body">
+          <p>Id: <span>${plato.mercaderiaId}</span></p>
+          <p>Tipo: <span>${plato.tipo}</span></p>
+          <p>Precio: $ <span>${plato.precio}</span></p>
+          <p>Ingredientes <span>${plato.ingredientes}</span></p>
+          <p>Preparacion <span>${plato.preparacion}</span></p> 
+          </div>
+        </div>
+      </div>
+        `;
+        acordion.appendChild(elemento);
+    })
+    
+}
 /*
 const fetchPedidos = async () => {
     try {
@@ -65,7 +118,7 @@ const fetchPedidos = async () => {
         console.log(error)
     }
 }
-*/
+
 const pintarComandas = data => {
     data.forEach(pedido => {   
         let p = document.createElement('div');
@@ -99,4 +152,4 @@ const pintarComandas = data => {
         
     });
 }
-
+*/
