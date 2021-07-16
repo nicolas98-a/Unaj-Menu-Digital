@@ -196,6 +196,8 @@ const pintarcards = data => {
         templateCard.querySelector('#btn-agregar').dataset.id = mercaderia.mercaderiaId;
         
         templateCard.querySelector('.modal').setAttribute('id', 'modal-'+mercaderia.mercaderiaId);
+        templateCard.querySelector('#detalle-nombre').textContent = mercaderia.nombre;
+        templateCard.querySelector('#detalle-precio').textContent = mercaderia.precio;
         templateCard.querySelector('#tipo').textContent = mercaderia.tipo;
         templateCard.querySelector('#ingredientes').textContent = mercaderia.ingredientes;
         templateCard.querySelector('#preparacion').textContent = mercaderia.preparacion;

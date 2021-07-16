@@ -196,3 +196,7 @@ body {
 .modal-content {
   background-color: darkslategrey;
 }
+
+#detalle-nombre {
+  text-align: center;
+}

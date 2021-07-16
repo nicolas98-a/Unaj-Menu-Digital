@@ -1,7 +1,7 @@
 import { fetchPedidos} from './config.js';
 
 const comandas = document.getElementById('comandas');
-const pedidoTableBody = document.getElementById('pedidoTableBody');
+//const pedidoTableBody = document.getElementById('pedidoTableBody');
 //const fragment = document.createDocumentFragment();
 
 const fecha = new Date();
@@ -40,11 +40,30 @@ const renderPedidos = async () => {
         </div>
         `;
     }
+    else {
+        pintarComandas(pedidosJson);
+    }
 
-    pintarComandas(pedidosJson);
 }
 
 const pintarComandas = data => {
+    comandas.innerHTML = 
+    `
+    <table class="table table-striped table-hover mt-4">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Forma de entrega</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Mercaderias</th>
+    </tr>
+    </thead>
+    <tbody id="pedidoTableBody">
+
+    </tbody>
+</table>
+    `;
+    var pedidoTableBody = document.getElementById('pedidoTableBody');
     data.forEach(pedido => {
         pedidoTableBody.insertAdjacentHTML('beforeend', getPedidoTable(pedido));
         mercaderiaDelPedido(pedido);
@@ -59,7 +78,7 @@ const getPedidoTable = (pedidoJson) => {
             <td style="margin:10%">${pedidoJson.formaEntrega}</td>
             <td>${pedidoJson.precioTotal}</td>
             <td>
-                <div class="accordion" id="accordion-${pedidoJson.comandaId}"></div>
+                <div class="accordion accordion-flush" id="accordion-${pedidoJson.comandaId}"></div>
             </td>
         </tr>
 
@@ -75,21 +94,20 @@ const mercaderiaDelPedido = (pedidoJson) => {
         elemento.innerHTML = 
         `
         <div class="accordion-item">
-        <h2 class="accordion-header" id="heading-${plato.mercaderiaId}">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${pedidoJson.comandaId}-${plato.mercaderiaId}" aria-expanded="true" aria-controls="collapse-${pedidoJson.comandaId}-${plato.mercaderiaId}">
-            ${plato.nombre}
-          </button>
-        </h2>
-        <div id="collapse-${pedidoJson.comandaId}-${plato.mercaderiaId}" class="accordion-collapse collapse show" aria-labelledby="heading-${plato.mercaderiaId}" data-bs-parent="#accordion-${pedidoJson.comandaId}">
-          <div class="accordion-body">
-          <p>Id: <span>${plato.mercaderiaId}</span></p>
-          <p>Tipo: <span>${plato.tipo}</span></p>
-          <p>Precio: $ <span>${plato.precio}</span></p>
-          <p>Ingredientes <span>${plato.ingredientes}</span></p>
-          <p>Preparacion <span>${plato.preparacion}</span></p> 
-          </div>
+            <h2 class="accordion-header" id="heading-${plato.mercaderiaId}">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${pedidoJson.comandaId}-${plato.mercaderiaId}" aria-expanded="false" aria-controls="collapse-${pedidoJson.comandaId}-${plato.mercaderiaId}">
+                ${plato.nombre}
+                </button>
+            </h2>
+            <div id="collapse-${pedidoJson.comandaId}-${plato.mercaderiaId}" class="accordion-collapse collapse" aria-labelledby="heading-${plato.mercaderiaId}" data-bs-parent="#accordion-${pedidoJson.comandaId}">
+                <div class="accordion-body">
+                    <p>Id: <span>${plato.mercaderiaId}</span></p>
+                    <p>Tipo: <span>${plato.tipo}</span></p>
+                    <p>Precio: $<span>${plato.precio}</span></p>
+
+                </div>
+            </div>
         </div>
-      </div>
         `;
         acordion.appendChild(elemento);
     })

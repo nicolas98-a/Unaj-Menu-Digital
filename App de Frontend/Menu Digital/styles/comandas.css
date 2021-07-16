@@ -10,3 +10,18 @@
 #mercaderias-pedido li {
     display: inline;
 }
+
+.accordion-body {
+    width: max-content;
+}
+
+.accordion-button {
+    padding: 5px;
+    margin: 5px;
+}
+
+.accordion-header {
+    border: lightsteelblue solid 2px;
+    padding-right: 10px;
+    margin-top: 5px;
+}
