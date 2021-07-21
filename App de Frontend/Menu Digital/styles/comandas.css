@@ -4,15 +4,11 @@
 }
 .navbar {
     border-bottom: #c0392b 3px solid;
-    
-}
-
-#mercaderias-pedido li {
-    display: inline;
 }
 
 .accordion-body {
-    width: max-content;
+    max-width: fit-content;
+    text-align: left;
 }
 
 .accordion-button {
@@ -24,4 +20,13 @@
     border: lightsteelblue solid 2px;
     padding-right: 10px;
     margin-top: 5px;
+}
+
+.table {
+    align-items: center;
+    text-align: center;
+}
+
+.th , .td , .tr {
+    padding: 50px;
 }

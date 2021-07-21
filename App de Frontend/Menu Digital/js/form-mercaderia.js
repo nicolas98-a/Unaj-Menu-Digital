@@ -1,9 +1,31 @@
 import {postMercaderia} from './config.js'; 
 
-var formulario = document.getElementById('formulario-mercaderia');
+(function () {
+    'use strict';
 
-formulario.addEventListener('submit', async function(e){
-    e.preventDefault();
+    //var form = document.getElementById('formulario-mercaderia');
+    var form = document.querySelector('.needs-validation');
+    
+    form.addEventListener(
+        'submit',
+        function (event) {
+        if (!form.checkValidity()) {
+            console.log(form.checkValidity())
+            event.preventDefault();
+            event.stopPropagation();
+        } else {
+            event.preventDefault();
+            enviarFormulario(form);
+        }
+
+        form.classList.add('was-validated');
+        },
+            false
+    );
+    })();
+  // Fin de validacion de formulario con Bootstrap
+
+    const  enviarFormulario = async (formulario) => {
         let nombre = formulario.elements.nombre.value;
         let tipo = formulario.elements.tipoMercaderiaId.value;
         let precio = formulario.elements.precio.value;
@@ -52,54 +74,6 @@ formulario.addEventListener('submit', async function(e){
             </div>
         </div>  `;
         }
-
-        /*
-    try {
-        fetch('https://localhost:44368/api/Mercaderia', {
-            method: 'POST',
-            body: datosJson,
-            headers:{
-                'Content-Type': 'application/json;charset=UTF-8'
-                }
-        }).then( (response) => {
-            response.json();
-            console.log(response);
-            if (response.status === 201){
-                formulario.innerHTML = `   
-            <div class="card text-center p-0 my-2 ">
-                <div class="card-header bg-transparent text-success border-0">
-                    <i class="far fa-check-circle display-4 d-block"></i>
-                    <h5 class="card-title text-success display-4 d-block">Registro exitoso</h5>
-                </div>
-                <div class="card-body">
-                    <p class="card-text lead">La Mercaderia se ha registrado con éxito.</p>
-                    <a href="index.html" class="btn btn-primary m-auto">Ir al menu </a>
-                    <a href="form-mercaderia.html" class="btn btn-primary m-auto">Cargar otra Mercaderia </a>
-                </div>
-            </div> `;
-            }
-            if (response.status === 400){
-                formulario.innerHTML = ` 
-            <div class="card text-center p-0 my-2 ">
-                <div class="card-header bg-transparent text-danger border-0">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <h5 class="card-title text-danger display-4 d-block">Registro Fallido</h5>
-                </div>
-                <div class="card-body">
-                    <p class="card-text lead">La Mercaderia no se ha registrado.</p>
-                    <a href="index.html" class="btn btn-danger m-auto">Ir al menu </a>
-                    <a href="form-mercaderia.html" class="btn btn-danger m-auto">Cargar otra Mercaderia</a>
-                </div>
-            </div>  `;
-            }
-        })
-            .then(data => {
-                console.log(data)
-            })
-    } catch (error) {
-        console.log(error)
     }
-        */
-});
 
 

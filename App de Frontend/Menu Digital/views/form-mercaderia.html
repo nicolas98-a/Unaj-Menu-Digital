@@ -37,15 +37,21 @@
     </nav>
 <section id="form-mercaderia">
   <div class="container">
-    <form id="formulario-mercaderia">
+    <form class="needs-validation" id="formulario-mercaderia" novalidate>
       <div class="form-floating">
         
-        <input type="text" class="form-control" id="nom" name="nombre" placeholder="Nombre">
+        <input type="text" class="form-control" id="nom" name="nombre" placeholder="Nombre" required>
         <label for="nom">Nombre</label>
+        <div class="valid-feedback">
+          Bien!
+        </div>
+        <div class="invalid-feedback">
+          Ingrese un Nombre.
+        </div>
 
       </div>
       <div class="form-floating">
-        <select class="form-select" id="tipo" name="tipoMercaderiaId" aria-label="Floating label select example">
+        <select class="form-select" id="tipo" name="tipoMercaderiaId" aria-label="Floating label select example" required>
           <option value="" disabled selected>Elija una opcion</option>
           <option value="1">Entrada</option>
           <option value="2">Minutas</option>
@@ -59,22 +65,54 @@
           <option value="10">Postres</option>
         </select>
         <label for="tipo">Tipo de Mercaderia</label>
+        <div class="valid-feedback">
+          Bien!
+        </div>
+        <div class="invalid-feedback">
+          Por favor elija una opcion valida..
+        </div>
+
       </div>
       <div class="form-floating">
-        <input type="number" class="form-control" id="precio" name="precio" placeholder="Precio">
+        <input type="number" class="form-control" id="precio" name="precio" min="1" placeholder="Precio" required>
         <label for="precio">Precio</label>
+        <div class="valid-feedback">
+          Bien!
+        </div>
+        <div class="invalid-feedback">
+          Ingrese un precio valido.
+        </div>
+
       </div>
       <div class="form-floating">
-        <input type="text" class="form-control" id="ingredientes" name="ingredientes" placeholder="Ingredientes">
+        <input type="text" class="form-control" id="ingredientes" name="ingredientes" placeholder="Ingredientes" required>
         <label for="ingredientes">Ingredientes</label>
+        <div class="valid-feedback">
+          Bien!
+        </div>
+        <div class="invalid-feedback">
+          Ingrese los Ingredientes.
+        </div>
       </div>
       <div class="form-floating">
-        <input type="text" class="form-control" id="preparacion" name="preparacion" placeholder="Preparacion">
+        <input type="text" class="form-control" id="preparacion" name="preparacion" placeholder="Preparacion" required>
         <label for="preparacion">Preparacion</label>
+        <div class="valid-feedback">
+          Bien!
+        </div>
+        <div class="invalid-feedback">
+          Ingrese una Preparacion.
+        </div>
       </div>
       <div class="form-floating">
-        <input type="text" class="form-control" id="imagen" name="imagen" placeholder="imagen">
+        <input type="text" class="form-control" id="imagen" name="imagen" placeholder="imagen" required>
         <label for="imagen">Imagen</label>
+        <div class="valid-feedback">
+          Bien!
+        </div>
+        <div class="invalid-feedback">
+          Ingrese una Imagen.
+        </div>
       </div>
       <div class="form-floating">
         <button type="submit" class="btn btn-primary mb-3" id="btn-submit">Registrar</button>
