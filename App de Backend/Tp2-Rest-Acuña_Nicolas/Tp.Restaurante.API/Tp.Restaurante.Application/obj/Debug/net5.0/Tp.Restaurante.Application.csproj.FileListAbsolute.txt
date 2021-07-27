@@ -28,3 +28,18 @@ G:\Visual Studio\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Appli
 G:\Visual Studio\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\obj\Debug\net5.0\Tp.Restaurante.Application.dll
 G:\Visual Studio\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\obj\Debug\net5.0\ref\Tp.Restaurante.Application.dll
 G:\Visual Studio\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\obj\Debug\net5.0\Tp.Restaurante.Application.pdb
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\bin\Debug\net5.0\Tp.Restaurante.Application.deps.json
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\bin\Debug\net5.0\Tp.Restaurante.Application.dll
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\bin\Debug\net5.0\ref\Tp.Restaurante.Application.dll
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\bin\Debug\net5.0\Tp.Restaurante.Application.pdb
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\bin\Debug\net5.0\Tp.Restaurante.Domain.dll
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\bin\Debug\net5.0\Tp.Restaurante.Domain.pdb
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\obj\Debug\net5.0\Tp.Restaurante.Application.csprojAssemblyReference.cache
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\obj\Debug\net5.0\Tp.Restaurante.Application.GeneratedMSBuildEditorConfig.editorconfig
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\obj\Debug\net5.0\Tp.Restaurante.Application.AssemblyInfoInputs.cache
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\obj\Debug\net5.0\Tp.Restaurante.Application.AssemblyInfo.cs
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\obj\Debug\net5.0\Tp.Restaurante.Application.csproj.CoreCompileInputs.cache
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\obj\Debug\net5.0\Tp.Restaurante.Application.csproj.CopyComplete
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\obj\Debug\net5.0\Tp.Restaurante.Application.dll
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\obj\Debug\net5.0\ref\Tp.Restaurante.Application.dll
+G:\Visual Studio\TP3-UI-Acuña_Nicolas - correccion\App de Backend\Tp2-Rest-Acuña_Nicolas\Tp.Restaurante.API\Tp.Restaurante.Application\obj\Debug\net5.0\Tp.Restaurante.Application.pdb

@@ -47,7 +47,7 @@ const enviarPedido = async () => {
         <div class="card text-center p-0 my-2" id="rta">
             <div class="card-header bg-transparent text-success border-0">
                 <i class="far fa-check-circle display-4 d-block"></i>
-                <h5 class="card-title text-success display-4 d-block">Registro exitoso</h5>
+                <h5 class="card-title text-success display-6 d-block">Registro exitoso</h5>
             </div>
             <div class="card-body">
                 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -72,8 +72,8 @@ const enviarPedido = async () => {
         respuesta.innerHTML = ` 
         <div class="card text-center p-0 my-2" id="rta">
             <div class="card-header bg-transparent text-danger border-0">
-                <i class="fas fa-exclamation-triangle"></i>
-                <h5 class="card-title text-danger display-4 d-block">Registro Fallido</h5>
+                <i class="fas fa-exclamation-triangle display-4 d-block"></i>
+                <h5 class="card-title text-danger display-6 d-block">Registro Fallido</h5>
             </div>
             <div class="card-body">               
                 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> 
